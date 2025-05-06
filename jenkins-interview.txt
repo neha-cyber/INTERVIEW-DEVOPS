@@ -1,0 +1,85 @@
+
+1. **What is Jenkins?**
+   Jenkins is an open-source CI/CD automation tool used to build, test, and deploy software automatically.
+
+2. **What are the key features of Jenkins?**
+   Easy installation, 1000+ plugins, distributed builds, pipeline support, integration with version control, build triggers, and monitoring.
+
+3. **How does Jenkins work?**
+   Jenkins monitors the version control system (like Git) for changes. When a change is detected, it triggers a pipeline/job to build, test, and deploy 
+the code.
+
+4. **What is a Jenkins Pipeline?**
+
+pipline basically used to automate the lifecycle. so we can automatically test builed and deploy our appliaction. 
+
+
+5. What is plugins?
+Jenkins connect with other tools or add new features. There are over 1,000 plugins available .like Git, Docker, and 
+other tools to make your development process smoother and faster.
+
+5. **Difference between Declarative and Scripted Pipeline?**
+   Declarative: Simpler, structured format using `pipeline {}` block.
+   Scripted: More flexible, written in Groovy, uses `node {}` block.
+
+---
+
+### ✅ Intermediate-Level Questions
+
+6. **How do you trigger a Jenkins job automatically?**
+
+* Poll SCM
+* Webhooks (e.g., GitHub Webhook)
+* Cron (`Build periodically`)
+* Manual trigger
+
+7. **How do you configure Jenkins with Git?**
+   Install Git plugin, provide repo URL, optionally set credentials or SSH key. Use `git` block in pipeline or "Source Code Management" section in freestyle job.
+
+8. **What is a Jenkinsfile?**
+   A text file that defines the pipeline stages and steps, stored in the source code repo.
+
+9. **How do you pass credentials securely in Jenkins?**
+   Store them in Jenkins > Credentials and use `credentials()` helper inside `environment {}` in Jenkinsfile.
+
+10. **What is a "node" in Jenkins?**
+    A node is a machine (master or agent) where Jenkins runs jobs.
+
+---
+
+### ✅ Advanced & Scenario-Based Questions
+
+11. **Explain how you integrated Jenkins with S3.**
+    Used Jenkins pipeline and AWS CLI (`aws s3 cp`) to upload data to S3. Configured credentials securely using Jenkins secrets.
+
+12. **How did you configure Jenkins to send email alerts?**
+    Configured SMTP in Jenkins settings. Used `mail` step in pipeline's `post` block to send alerts on failure/success.
+
+13. **How do you schedule a job in Jenkins?**
+    Using cron syntax either in job configuration or `triggers` block in Jenkinsfile.
+
+14. **Have you used Jenkins on both Linux and Windows?**
+    Yes. On Linux, installed via CLI (`wget`, `apt`, `yum`). On Windows, used the installer. Configured Java, Jenkins service, and firewall.
+
+15. **How do you handle job failures in Jenkins?**
+    Used `post { failure { ... } }` block for alerts. Used `retry()` and `catchError()` for robustness.
+
+16. **How do you handle dynamic parameters in Jenkins pipelines?**
+    Using `parameters {}` block to define inputs like environment or version.
+
+---
+
+### ✅ Bonus: DevOps Integration Questions
+
+17. **Have you integrated Jenkins with Docker or Kubernetes?**
+    Not yet, but aware of the flow and plan to set up CI/CD with Docker soon.
+
+18. **What plugins have you worked with in Jenkins?**
+    Git, Pipeline, Email Extension, S3 Publisher, Credentials Binding, etc.
+
+19. **Difference between Freestyle and Pipeline job?**
+    Freestyle: GUI-based, simpler.
+    Pipeline: Code-based, supports complex workflows.
+
+20. **How do you back up Jenkins configuration?**
+    Backup `JENKINS_HOME` directory regularly (includes jobs, configs, plugins, credentials).

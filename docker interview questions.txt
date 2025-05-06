@@ -1,0 +1,79 @@
+
+Whai is docker?
+docker is a platform which used to create,bild and run application in isolated eveornment which is called conatiners. conatiners includes everything
+which needs to run an appliaction like code,libreries,dependies and configuration.
+
+Why do we use Docker?
+1. Portability:  	Docker containers can run on any system that supports Docker
+2. Isolation:  		Docker containers isolate applications
+3. Efficiency:	 	Docker containers are lightweight compared to virtual machines
+4. Scalability: 	Docker makes it easy to scale applications horizontally by running multiple containers.
+5. Version Control: 	Docker images can be versioned, allowing easy rollbacks and managing different versions of applications.
+6: Security: 		Containers provide isolation, which improves security by limiting the impact of a potential security breach within one container.
+7:Faster Development and Deployment:
+
+what is dockerfile?
+its an simple text file which inclued every instrustion to build and image.
+
+what is image.?
+image has all the required things to run an application like like libraices and dependencies.
+
+
+what is tags in docker
+
+When you build or pull a Docker image, the tag specifies which version of the image you want.It's like naming a snapshot of your app.
+docker build -t myapp:1.0 .
+
+what is the differnce between phsical server and docker container.
+
+A physical server is a real computer that runs applications directly using its hardware.
+A Docker container is a lightweight, virtual environment that runs applications with all their dependencies, without needing a full computer.
+
+Differnce between copy and add.
+so cp used to copy thing from host to container.
+ADD is also same but with some other extra functionalities like you Can extract .tar files and other compressed files.
+
+Change Environment Variables (Without Rebuilding the Image)
+If you need to change environment variables without modifying the Dockerfile or rebuilding the image, you can pass them when running the container.
+
+
+What is the difference between docker run and docker start?
+Answer:
+
+docker run: Creates and starts a new container from an image.
+
+docker start: Starts a previously stopped container.
+
+
+
+
+
+docker run -e APP_ENV=production -d my-image
+
+docker --version			-----to check the version
+docker build . 				-----to build an image
+docker run -p 3000:3000 image id 	-----to run an image
+docker ps 				-----to check all the conatiners
+docker ps -a 				-----to check all the running conatiners
+docker rmi imageid 			-----to delete an image
+docker rm 				-----to delete an container
+docker --version 			-----to check the version
+docker build . 				-----to build an image
+docker run -p 3000:3000 image id 	-----to run an image
+docker ps 				-----to check all the running images 
+docker ps -a 				-----to check all the images				
+docker build -t myapp:v1 image id 	-----to specify the tags 
+docker run -t myapp:v1 <image_id> 	-----to allowing you to specify the version or tag for the container
+docker logs          			-----to check the logs
+docker images ls                        -----to check the images
+docker run -d <image_name>              -----to run an container in background
+docker info                             -----show information about Docker's system usage
+docker inspect <container_id_or_name>   -----to view detailed information about a specific container?
+docker pull <image_name>                -----to pull a Docker image from Docker Hub
+docker stop 				-----to stop an running container
+
+ 
+
+
+
+

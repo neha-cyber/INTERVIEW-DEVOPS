@@ -1,0 +1,83 @@
+🔧 Jenkins / CI-CD Scenarios
+How will you set up a Jenkins job to build and deploy a Dockerized React app?
+
+Explain pipeline creation, cloning Git repo, building Docker image, and running container.
+
+What if your Jenkins build fails after pulling the latest code? How will you debug?
+
+Talk about checking Jenkins logs, Git commit issues, and Dockerfile errors.
+
+How do you trigger a Jenkins build on every GitHub push?
+
+Via GitHub webhook integration and Jenkins "Poll SCM" or "GitHub hook trigger".
+
+What if the Jenkins job works manually but not via webhook?
+
+Possible causes: Webhook misconfig, Jenkins-GitHub credential issue, or firewall block.
+
+🐳 Docker Scenarios
+You pushed a new Docker image and deployment failed—what would you check?
+
+Dockerfile syntax, port mapping, exposed env vars, app logs (docker logs).
+
+How do you update an environment variable without changing the Dockerfile?
+
+Use docker run -e VAR=value or use docker-compose.
+
+What if the Docker container exits immediately after running?
+
+Check for CMD issues in Dockerfile or missing entrypoint scripts.
+
+☁️ AWS / S3 / DevOps Scenarios
+You have app logs in S3. How do you analyze or alert on errors in real-time?
+
+Use AWS Lambda + CloudWatch + S3 event trigger + SNS or Datadog for alerts.
+
+A deployment failed because an S3 file was missing—how do you debug?
+
+Check bucket policy, region mismatch, file path or IAM permissions.
+
+How would you host a React app on S3?
+
+Build React app → Upload build/ folder to S3 → Enable static website hosting → Set bucket policy.
+
+🔍 Git / Version Control Scenarios
+You accidentally pushed sensitive data—how will you remove it?
+
+Use git filter-branch or BFG tool, then force push with proper .gitignore.
+
+Your feature branch has many commits; how do you clean it before merging?
+
+Use git rebase -i and squash commits.
+
+🛠️ Troubleshooting & Real Incidents
+What’s your approach when a production server goes down?
+
+Immediate steps, log checking, rollback if needed, communicate with teams.
+
+How would you troubleshoot high CPU usage in a containerized app?
+
+Use docker stats, top command inside container, and logs.
+
+A developer says their code is not reflecting after deployment—what will you check?
+
+Check build logs, deployment steps, cached layers, and tag mismatch.
+
+Would you like sample answers for these scenarios too?
+
+
+
+
+
+
+
+Voice chat ended
+
+
+
+
+
+
+
+
+Se
